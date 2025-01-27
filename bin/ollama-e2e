@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if ! command -v ollama &>/dev/null; then
+  curl -fsSL https://ollama.com/install.sh | sh
+fi
+
+if ! command -v nvitop &>/dev/null; then
+  pip install nvitop
+fi
+
+for arg in "$@"; do
+  ollama pull "$arg"
+done
+
+ollama ls
+
+if [ -n "$2" ]; then
+  ollama run "$1" --verbose "$2"
+fi
