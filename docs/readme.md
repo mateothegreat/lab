@@ -2,6 +2,8 @@
 
 ## Ollama
 
+![alt text](Cursor-002189.jpg)
+
 Download the script and run with the following (optional) arguments:
 
 | #   | Arguments | Description                     |
