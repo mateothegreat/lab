@@ -2,20 +2,29 @@
 
 ## Ollama
 
-Install Ollama only:
+Download the script and run with the following (optional) arguments:
+
+| #   | Arguments | Description                     |
+| --- | --------- | ------------------------------- |
+| 0   | `model`   | Install Ollama only             |
+| 1   | `prompt`  | Run a model with verbose output |
+
+Examples:
+
+Run a model with verbose output:
 
 ```bash
-curl -s https://raw.githubusercontent.com/mateothegreat/lab/refs/heads/main/bin/ollama-e2e | bash
+bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e) mistral "What is the capital of France?"
 ```
 
 Install Ollama and pull a model:
 
 ```bash
-curl -s https://raw.githubusercontent.com/mateothegreat/lab/refs/heads/main/bin/ollama-e2e | bash mistral
+bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e) mistral
 ```
 
-Run a model with verbose output:
+Install Ollama only:
 
 ```bash
-curl -s https://raw.githubusercontent.com/mateothegreat/lab/refs/heads/main/bin/ollama-e2e | bash mistral "What is the capital of France?"
+bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e)
 ```
