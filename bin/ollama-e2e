@@ -1,5 +1,23 @@
 #!/bin/bash
-
+#
+# ollama-e2e
+#
+# Install Ollama and run a model with verbose output
+#
+# Usage:
+#   ollama-e2e [model] [prompt]
+#
+# Examples:
+#   ollama-e2e mistral "What is the capital of France?"
+#   ollama-e2e
+#   bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e) mistral "What is the capital of France?"
+#
+# Install Ollama and pull a model:
+#   bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e) mistral
+#
+# Run a model with verbose output:
+#   bash <(curl -s https://raw.githubusercontent.com/mateothegreat/lab/main/bin/ollama-e2e) mistral "What is the capital of France?"
+#
 if ! command -v ollama &>/dev/null; then
   curl -fsSL https://ollama.com/install.sh | sh
 fi
